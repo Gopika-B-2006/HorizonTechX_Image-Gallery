@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">✦ Image Gallery</div>
+      <div class="search-wrap">
+        <span class="icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search images…" autocomplete="off">
+      </div>
+      <div class="header-actions">
+        <span class="stats-badge" id="countBadge">0 images</span>
+        <button class="btn-icon" id="themeBtn" title="Toggle theme">🌙</button>
+        <button class="btn-icon" id="slideshowStartBtn" title="Start Slideshow">▶</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── FILTER BUTTONS ── -->
+  <div class="filters-bar" id="filtersBar"></div>
+
+  <!-- ── STATS ROW ── -->
+  <div class="stats-row" id="statsRow"></div>
+
+  <!-- ── GALLERY GRID ── -->
+  <div class="gallery-wrap">
+    <div class="gallery-grid" id="gallery"></div>
+  </div>
+
+  <!-- ── FAVORITES SIDE TAB ── -->
+  <div class="fav-tab" id="favTab">
+    <span>★</span>
+    <span>FAV</span>
+    <span class="fav-count" id="favCount">0</span>
+  </div>
+
+  <!-- ── FAVORITES PANEL ── -->
+  <div class="fav-panel" id="favPanel">
+    <div class="fav-panel-header">
+      <div class="fav-panel-title">★ Favorites</div>
+      <button class="btn-icon" id="favClose">✕</button>
+    </div>
+    <div class="fav-grid" id="favGrid"></div>
+  </div>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-counter" id="lbCounter">1 / 10</div>
+    <button class="lb-close" id="lbClose">✕</button>
+    <a class="lb-download" id="lbDownload" download title="Download">⬇</a>
+    <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="">
+      <div class="lb-info">
+        <div class="lb-title" id="lbTitle"></div>
+        <div class="lb-cat"   id="lbCat"></div>
+      </div>
+    </div>
+    <button class="lb-nav lb-next" id="lbNext">›</button>
+    <button class="slideshow-btn" id="slideshowBtn">⏵ Start Slideshow</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
